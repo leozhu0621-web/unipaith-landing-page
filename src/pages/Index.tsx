@@ -24,6 +24,7 @@ const Index = () => (
     <AIFeaturesSection />
     <FlywheelSection />
     <SocialProofSection />
+    <FAQSection />
     <DualCTASection />
     <Footer />
   </div>
