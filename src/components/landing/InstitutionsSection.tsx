@@ -9,13 +9,13 @@ const comparisons = [
 ];
 
 const InstitutionsSection = () => (
-  <section id="institutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-harbor-600">
+  <section id="institutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-ocean-500">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal variant="blur-in">
         <div className="text-center mb-16">
-          <span className="inline-block bg-ivory-100/15 text-ivory-100 text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Institutions</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory-100 mb-4 font-heading">Admissions, transformed</h2>
-          <p className="text-ivory-100/70 max-w-lg mx-auto text-lg">See the difference UniPaith makes — side by side.</p>
+          <span className="inline-block bg-white/15 text-white text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Institutions</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 font-heading">Admissions, transformed</h2>
+          <p className="text-white/70 max-w-lg mx-auto text-lg">See the difference UniPaith makes — side by side.</p>
         </div>
       </ScrollReveal>
 
@@ -27,8 +27,8 @@ const InstitutionsSection = () => (
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200} variant="fade-right">
-            <div className="p-6 sm:p-8 text-center bg-harbor-500/5">
-              <h3 className="text-lg font-bold text-harbor-500 font-heading">With UniPaith</h3>
+            <div className="p-6 sm:p-8 text-center bg-ocean-500/5">
+              <h3 className="text-lg font-bold text-ocean-500 font-heading">With UniPaith</h3>
             </div>
           </ScrollReveal>
         </div>
@@ -40,8 +40,8 @@ const InstitutionsSection = () => (
                 <X className="text-destructive flex-shrink-0 mt-0.5" size={18} />
                 <p className="text-sm text-muted-foreground">{row.before}</p>
               </div>
-              <div className="p-5 sm:p-6 flex items-start gap-3 bg-harbor-500/[0.02]">
-                <Check className="text-harbor-500 flex-shrink-0 mt-0.5" size={18} />
+              <div className="p-5 sm:p-6 flex items-start gap-3 bg-ocean-500/[0.02]">
+                <Check className="text-ocean-500 flex-shrink-0 mt-0.5" size={18} />
                 <p className="text-sm text-foreground font-medium">{row.after}</p>
               </div>
             </div>

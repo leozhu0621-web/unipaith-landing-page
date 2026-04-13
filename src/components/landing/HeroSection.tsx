@@ -5,15 +5,15 @@ import ScrollReveal from "./ScrollReveal";
 const HeroSection = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div className="absolute inset-0 -z-10">
-      <div className="absolute top-20 left-[10%] w-72 h-72 bg-navy-500/15 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-mist-500/20 rounded-full blur-3xl animate-float-slow" />
-      <div className="absolute top-1/3 right-[20%] w-48 h-48 bg-harbor-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute bottom-1/3 left-[20%] w-64 h-64 bg-slate-500/15 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: "4s" }} />
+      <div className="absolute top-20 left-[10%] w-72 h-72 bg-ocean-500/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-steel-400/20 rounded-full blur-3xl animate-float-slow" />
+      <div className="absolute top-1/3 right-[20%] w-48 h-48 bg-navy-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-1/3 left-[20%] w-64 h-64 bg-ocean-500/8 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: "4s" }} />
     </div>
 
     <div className="max-w-5xl mx-auto text-center">
       <ScrollReveal variant="blur-in">
-        <div className="inline-flex items-center gap-2 bg-harbor-500/10 text-harbor-500 rounded-full px-5 py-2 text-sm font-medium mb-8">
+        <div className="inline-flex items-center gap-2 bg-ocean-500/10 text-ocean-500 rounded-full px-5 py-2 text-sm font-medium mb-8">
           <Sparkles size={16} />
           AI-Powered Admissions Platform
         </div>
@@ -23,7 +23,7 @@ const HeroSection = () => (
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight font-heading">
           Apply once.{" "}
           <br className="hidden sm:block" />
-          <span className="text-harbor-500">Go anywhere.</span>
+          <span className="text-ocean-500">Go anywhere.</span>
         </h1>
       </ScrollReveal>
 
@@ -35,7 +35,7 @@ const HeroSection = () => (
 
       <ScrollReveal delay={600}>
         <div className="max-w-md mx-auto">
-          <Button size="lg" className="h-12 rounded-xl px-8 bg-harbor-500 hover:bg-harbor-600 text-ivory-100 shadow-lg text-base" asChild>
+          <Button size="lg" className="h-12 rounded-xl px-8 bg-gold-500 hover:bg-gold-600 text-white shadow-lg text-base font-semibold" asChild>
             <a href="https://app.unipaith.co/login">
               Join the Waitlist
               <ArrowRight size={18} className="ml-2" />
