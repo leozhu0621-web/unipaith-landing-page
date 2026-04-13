@@ -18,25 +18,25 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl hover:scale-105 transition-transform">
-            <span className="font-normal text-mist-400">Uni</span>
-            <span className="font-extrabold text-ivory-100">Paith</span>
+            <span className="font-normal text-steel-400">Uni</span>
+            <span className="font-extrabold text-fog-100">Paith</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((l) => (
-              <Link key={l.to} to={l.to} className="story-link text-sm font-medium text-mist-300 hover:text-ivory-100 transition-colors">
+              <Link key={l.to} to={l.to} className="story-link text-sm font-medium text-steel-400 hover:text-fog-100 transition-colors">
                 {l.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="border-mist-500 text-ivory-100 hover:bg-harbor-500 hover:text-ivory-100" asChild>
+            <Button variant="outline" size="sm" className="border-steel-500 text-fog-100 hover:bg-ocean-500 hover:text-white" asChild>
               <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
-            <Button size="sm" className="bg-ivory-100 text-navy-500 hover:bg-ivory-200" asChild>
+            <Button size="sm" className="bg-gold-500 text-white hover:bg-gold-600 font-semibold" asChild>
               <a href="https://app.unipaith.co/login">Join the Waitlist</a>
             </Button>
           </div>
 
-          <button className="md:hidden text-ivory-100" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className="md:hidden text-fog-100" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -45,15 +45,15 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="md:hidden bg-navy-500 border-b border-navy-400/30 px-4 pb-4 space-y-3">
           {links.map((l) => (
-            <Link key={l.to} to={l.to} onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-mist-300 hover:text-ivory-100">
+            <Link key={l.to} to={l.to} onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-steel-400 hover:text-fog-100">
               {l.label}
             </Link>
           ))}
           <div className="flex flex-col gap-2 pt-2">
-            <Button variant="outline" size="sm" className="border-mist-500 text-ivory-100 hover:bg-harbor-500" asChild>
+            <Button variant="outline" size="sm" className="border-steel-500 text-fog-100 hover:bg-ocean-500" asChild>
               <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
-            <Button size="sm" className="bg-ivory-100 text-navy-500 hover:bg-ivory-200" asChild>
+            <Button size="sm" className="bg-gold-500 text-white hover:bg-gold-600 font-semibold" asChild>
               <a href="https://app.unipaith.co/login">Join the Waitlist</a>
             </Button>
           </div>

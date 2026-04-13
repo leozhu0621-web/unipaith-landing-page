@@ -61,43 +61,44 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        ivory: {
-          50: "#FFFDF5",
-          100: "#FEF6DC",
-          200: "#FDF0C4",
-          300: "#FCEAAB",
-          400: "#FAE08A",
-          500: "#F8D468",
+        // Fog White — light section backgrounds
+        fog: {
+          50: "#F9FBFD",
+          100: "#F5F8FC",
+          200: "#EBF1F7",
         },
-        mist: {
-          300: "#A8B4BB",
-          400: "#94A3AB",
-          500: "#80939B",
-          600: "#6C7F87",
-          700: "#586B73",
+        // Steel Mist — subtle mid-tone, dividers
+        steel: {
+          300: "#C8D8E6",
+          400: "#B8CCDC",
+          500: "#A0B8CC",
+          600: "#88A4BC",
         },
-        slate: {
-          300: "#8899A5",
-          400: "#707F8D",
-          500: "#586C7B",
-          600: "#485A68",
-          700: "#384855",
+        // Ocean Blue — accent, links, mid-tone sections
+        ocean: {
+          300: "#5A92C0",
+          400: "#3E7DB2",
+          500: "#2E6DA4",
+          600: "#255A88",
+          700: "#1C476C",
         },
-        harbor: {
-          300: "#5A7A8F",
-          400: "#415D6E",
-          500: "#273C4D",
-          600: "#1F303D",
-          700: "#17242E",
-        },
+        // Midnight Navy — dark sections, headers, primary text
         navy: {
-          300: "#4A5275",
-          400: "#323A5A",
-          500: "#1A223F",
-          600: "#151B33",
-          700: "#101427",
-          800: "#0B0E1B",
-          900: "#060810",
+          300: "#3A4D6B",
+          400: "#253654",
+          500: "#0F1F3D",
+          600: "#0C1931",
+          700: "#091325",
+          800: "#060D19",
+          900: "#03070D",
+        },
+        // Warm Gold — CTAs, highlights, key moments
+        gold: {
+          300: "#E8B85A",
+          400: "#DCA940",
+          500: "#D4992A",
+          600: "#B38024",
+          700: "#92671D",
         },
       },
       borderRadius: {
