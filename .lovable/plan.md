@@ -1,98 +1,39 @@
 
 
-# Complete Landing Page Redesign — New Color Palette & Structure
+# Separate Pages for Student, Institution, AI Engine, and About
 
 ## Overview
-Tear down and rebuild the entire landing page with a new navy/slate/mist/ivory color palette and restructured navigation. The earthy forest green theme is replaced with a sophisticated deep blue scheme.
+Move each section from the single-page layout into its own dedicated route. The homepage keeps Hero, Problem, Flywheel, FAQ, and Dual CTA. Navbar and Footer links become React Router `<Link>` elements.
 
-## New Color System
+## Changes
 
-```text
-Warm Ivory   #FEF6DC  — backgrounds, light sections
-Mist Blue    #80939B  — muted text, secondary elements
-Slate Blue   #586C7B  — body text, borders
-Deep Harbor  #273C4D  — headings, primary actions
-Midnight Navy #1A223F — dark sections, footer, navbar
-```
+### 1. Create 4 new page files
+- `src/pages/Students.tsx` — wraps `StudentsSection` with Navbar + Footer
+- `src/pages/Institutions.tsx` — wraps `InstitutionsSection` with Navbar + Footer
+- `src/pages/AIEngine.tsx` — wraps `AIFeaturesSection` with Navbar + Footer
+- `src/pages/About.tsx` — wraps `SocialProofSection` (the about/team content) with Navbar + Footer
 
-## New Navigation
-Links: **Student** | **Institution** | **AI Engine** | **About**
-CTAs: **Request Demo** (outline) | **Join the Waitlist** (solid)
+Each page follows the same pattern: Navbar at top, section content with `pt-20` (for fixed navbar clearance), DualCTASection, Footer at bottom.
 
-## What Changes
+### 2. Update `src/App.tsx`
+Add routes:
+- `/students` → Students page
+- `/institutions` → Institutions page
+- `/ai-engine` → AIEngine page
+- `/about` → About page
 
-### 1. Color tokens (`src/index.css`)
-Replace all `:root` and `.dark` CSS variables to map to the new palette:
-- `--background` → Warm Ivory
-- `--foreground` → Deep Harbor
-- `--primary` → Deep Harbor
-- `--secondary` → Slate Blue
-- `--muted` → Mist Blue tones
-- `--accent` → Warm Ivory/gold kept as accent
-- Dark mode section → Midnight Navy base
+### 3. Slim down `src/pages/Index.tsx`
+Remove `StudentsSection`, `InstitutionsSection`, `AIFeaturesSection`, `SocialProofSection`, and their `NarrativeBreak` wrappers. Keep: Hero, Problem, Flywheel, FAQ, DualCTA, Footer.
 
-### 2. Tailwind config (`tailwind.config.ts`)
-- Remove `forest`, `sage`, `gold` color scales
-- Add `ivory`, `mist`, `slate`, `harbor`, `navy` scales derived from the 5 hex values
-- Keep Lora + Inter fonts
+### 4. Update `Navbar.tsx`
+- Change `<a href="#students">` → React Router `<Link to="/students">` (and same for all 4 links)
+- Logo link → `<Link to="/">`
+- CTA links stay as anchor `#cta` or become `/` + scroll
 
-### 3. Navbar (`Navbar.tsx`)
-- Update links to: Student (`#students`), Institution (`#institutions`), AI Engine (`#ai-engine`), About (`#about`)
-- Restyle with Midnight Navy background, ivory text
-- CTA buttons use harbor/ivory scheme
+### 5. Update `Footer.tsx`
+- Same link changes: anchor `#students` → `<Link to="/students">`, etc.
 
-### 4. Hero Section (`HeroSection.tsx`)
-- Replace forest/gold floating blobs with navy/mist/ivory gradient blobs
-- Update badge, heading accent color, and button colors to new palette
-- Keep copy structure but restyle
-
-### 5. Problem Section (`ProblemSection.tsx`)
-- Swap all `forest-*`, `gold-*` references to new palette equivalents
-- Counter colors → harbor, slate, mist
-
-### 6. Narrative Breaks (`NarrativeBreak.tsx`)
-- Dark band uses Midnight Navy instead of forest-800
-- Accent line uses ivory or mist instead of gold
-
-### 7. Students Section (`StudentsSection.tsx`)
-- Step colors/badges → harbor, slate, mist tones
-- Section background → ivory
-
-### 8. Institutions Section (`InstitutionsSection.tsx`)
-- Comparison table restyled with harbor/slate palette
-- Section ID stays `#institutions`
-
-### 9. AI Features Section (`AIFeaturesSection.tsx`)
-- Section ID → `#ai-engine` to match new nav
-- Feature icon colors → harbor, slate, mist scheme
-- Mock UI cards reworked with new palette
-
-### 10. Flywheel Section (`FlywheelSection.tsx`)
-- Orbit/node colors → new palette
-- Background → light mist tone
-
-### 11. Social Proof / About Section (`SocialProofSection.tsx`)
-- Add `id="about"` anchor for new nav link
-- Restyle founder cards with harbor/ivory scheme
-
-### 12. FAQ Section (`FAQSection.tsx`)
-- Restyle accordion triggers and icons with new palette
-
-### 13. Dual CTA Section (`DualCTASection.tsx`)
-- Gradient background → Midnight Navy to Deep Harbor
-- Button colors → ivory on harbor, outline variant
-
-### 14. Footer (`Footer.tsx`)
-- Background → Midnight Navy
-- Link hover → Warm Ivory
-- Update nav links to match new structure
-
-### 15. Update project memory
-Save new color palette to `mem://design/brand-colors` and update index.
-
-## Files Modified
-- `src/index.css` — full CSS variable replacement
-- `tailwind.config.ts` — new color scales
-- All 12 landing components restyled
-- `mem://design/brand-colors` and `mem://index.md`
+### Files touched
+- **New**: `src/pages/Students.tsx`, `src/pages/Institutions.tsx`, `src/pages/AIEngine.tsx`, `src/pages/About.tsx`
+- **Modified**: `src/App.tsx`, `src/pages/Index.tsx`, `src/components/landing/Navbar.tsx`, `src/components/landing/Footer.tsx`
 
