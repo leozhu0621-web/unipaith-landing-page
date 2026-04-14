@@ -149,6 +149,7 @@ export default {
         "orbit": "orbit 20s linear infinite",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+        "fade-in": "fade-in 0.7s ease-out",
       },
     },
   },
