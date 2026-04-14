@@ -6,9 +6,8 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
         <div>
-          <Link to="/" className="text-lg mb-4 block">
-            <span className="font-normal text-steel-400">Uni</span>
-            <span className="font-extrabold text-fog-100">Paith</span>
+          <Link to="/" className="mb-4 block">
+            <img src={logoDark} alt="UniPaith" className="h-7" />
           </Link>
           <p className="text-sm text-fog-100/60">Apply once, go anywhere. AI-powered admissions for a connected world.</p>
         </div>
